@@ -15,12 +15,15 @@ $(document).ready(function () {
 
   $(".scroll-up-btn").click(function () {
     $("html").animate({ scrollTop: 0 });
-
     $("html").css("scrollBehavior", "auto");
   });
 
   $("#nav-menu .menu li a").click(function () {
     $("html").css("scrollBehavior", "smooth");
+
+    // Close mobile menu if open
+    $("#nav-menu .menu").removeClass("active");
+    $(".menu-btn i").removeClass("active");
   });
 
   $(".menu-btn").click(function () {
